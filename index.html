@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Dynamic VCard</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>My Dynamic VCard</h1>
+	<div id="vcard"></div>
+
+	<script>
+		$(document).ready(function() {
+			var vcard = {
+				"firstName": "Abhinand",
+				"lastName": "Dhandapani",
+				"title": "Mr",
+				"email": "abhinanddhandapani704@gmail.com",
+				"phone": "7306466576"
+			};
+
+			var vcardHtml = "<div class='vcard'>" +
+								"<p class='name'>" + vcard.firstName + " " + vcard.lastName + "</p>" +
+								"<p class='title'>" + vcard.title + "</p>" +
+								"<p class='email'>" + vcard.email + "</p>" +
+								"<p class='tel'>" + vcard.phone + "</p>" +
+							"</div>";
+
+			$("#vcard").html(vcardHtml);
+		});
+	</script>
+</body>
+</html>
